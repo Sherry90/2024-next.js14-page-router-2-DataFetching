@@ -1,9 +1,13 @@
-function HomePage(props) {
+const HomePage = (props) => {
   return (
     <ul>
-      <li>Product 1</li>
-      <li>Product 2</li>
-      <li>Product 3</li>
+      {products.map((product) => (
+        <li
+          key={product.id}
+          title={product.title}
+          description={props.description}
+        ></li>
+      ))}
     </ul>
   );
 }
