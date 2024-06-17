@@ -1,8 +1,13 @@
-const ProductDetailPage = () => {
+import path from "path";
+import fs from "fs/promises";
+
+const ProductDetailPage = (props) => {
+  const { loadedProduct } = props;
+
   return (
     <>
-      <h1>Title</h1>
-      <p>DESCRIPTION</p>
+      <h1>{loadedProduct.title}</h1>
+      <p>{loadedProduct.description}</p>
     </>
   );
 };
